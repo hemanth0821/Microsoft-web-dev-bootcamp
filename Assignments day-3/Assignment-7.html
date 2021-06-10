@@ -1,0 +1,57 @@
+<html>
+
+	<head>
+
+		<title>Assignment-7</title>
+
+		<style>
+			p{
+				color: rebeccapurple;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>Your Gender and Favorite Sport:</h3>
+		<label for="gender">Gender</label>
+		<input type="Radio" id="gender" name="gender" value="female"/>Female
+		<input type="Radio" id="gender" name="gender" value="male">Male
+		<br><br>
+		<input type="checkbox" id="cricket" name="cricket">cricket
+		<input type="checkbox" id="football" name="football">football
+		</br><br>
+		<button onclick="readData()">Submit</button>
+		<p id="gen"></p>
+		<p id="result"></p>
+		<script>
+			function readData() {
+				var cricket=document.getElementById('cricket');
+				var football=document.getElementById('football');
+				var res;
+				var male=document.getElementById("gender");
+				var female=document.getElementById("gender");
+				var a
+				if(male.checked!=true)
+					a="male";
+				else
+					a="female";
+				document.getElementById("gen").innerHTML=a;
+
+				if(cricket.checked == true && football.checked == true){
+					res='cricket, football';
+				}
+				else if(cricket.checked == false && football.checked == true){
+					res='football only';
+				}
+				else if(cricket.checked == true && football.checked == false){
+					res='cricket only';
+				}
+				else{
+					res='None';
+				}
+				document.getElementById('result').innerHTML=res;
+
+			}
+		</script>
+	</body>
+</html>
+© 2021 GitHub, Inc.
