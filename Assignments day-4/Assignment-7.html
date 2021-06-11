@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 7 </title>
+</head>
+<body>
+	<form>
+		<!-- name of the subscriber-->
+		<label for="name">NAME:</label>
+		<input type="text" name="name" id="name" placeholder="Enter your name"/>
+		<br><br>
+
+		<!-- email id-->
+		<label for="email">EMAIL ID</label>
+		<input type="text" name="email" id="email" placeholder="ENter your email id"/>
+		<br><br>
+
+		<!-- phone number -->
+		<label for="phone">PHONE</label>
+		<input type="text" name="phone" id="phone" placeholder="ENter your mobile no."/>
+		<br><br>
+
+		
+		<!-- submit --> 
+		<button onclick="subDate()">Subscribe</button>
+		<p id="result"></p>
+	</form>
+	<script>
+		function subData() {
+			// body...
+			var name=document.getElementById('name').value;
+			var email=document.getElementById('email').value;
+			var phone=document.getElementById('phone').value;
+			var data="Name: " +name +"Email: " +email +"phone number: "+phone;
+			document.getElementById('result').innerHTML=data;
+		}
+	</script>
+</body>
+</html>
